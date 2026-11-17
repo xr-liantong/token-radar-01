@@ -69,3 +69,5 @@ A board that breaks the gate's shape (`boardIssue` not null) or screenshots that
 ## Entry authoring
 
 `main.ts` and `lib/model.ts` are written as whole files and then tightened a second time (named constants for the gate caps, one `fail()` path for every exit, parser helpers that share one field-error format, `boardIssue` naming the bound it expected). The generated artifacts are unchanged by those edits: every run above reproduces the same three sha256 values.
+
+- The three artefacts above were re-run from this commit and matched byte for byte.

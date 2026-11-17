@@ -107,3 +107,13 @@ Optional: earn referral rewards, a second way to make money — <https://make.fu
 ## License
 
 MIT. See `LICENSE`.
+
+## Reproducibility
+
+Two runs on the same snapshot write the same bytes; these are the three artefacts of a double run on Node 22:
+
+- `board.json` — 359,505 B, `sha256 0ff9e2ea83c038016bbbc2d6dfd5cda10cf9066abe4c20254313e1941a5090f3`
+- `data.js` — 398,273 B, `sha256 e22be28069a6078d518b5fcf9518a77cbc683222fb76049df29d258f1af71a92`
+- `dossier.json` — 334,165 B, `sha256 e1e47d294e6ecee40a9f901adba16dbe6854819cb86881a3f96178140df51284`
+
+A missing snapshot or one that does not parse exits 2 before anything is written.
