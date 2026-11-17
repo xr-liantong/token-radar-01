@@ -83,7 +83,7 @@ The board says "the snapshot records no token", never "the protocol has no token
 
 ## Verification
 
-- Two runs with `--input ..\work\snapshot.json` into separate output directories are exit `0` and byte-identical: `board.json` 359,505 B sha256 `0ff9e2ea…`, `data.js` 398,273 B sha256 `e22be280…`, `dossier.json` 334,165 B sha256 `e1e47d29…`.
+- Two runs with `--input ..\work\snapshot.json` into separate output directories are exit `0` and byte-identical: `board.json` 359,505 B sha256 `0ff9e2ea…`, `data.js` 398,273 B sha256 `e22be280…`, `dossier.json` 334,163 B sha256 `1f09f11e…`.
 - `dossier.json` text is 33,664 B (≤65,536), has 3 images and no http(s) addresses; `buildDossier(out)` recomputation is byte-identical.
 - Screenshots: `1-board.png` 69,264 B sha256 `3d192e59…`, `2-detail.png` 89,942 B sha256 `8bdc6bb8…`, `3-filtered.png` 65,339 B sha256 `db4ac2a7…`; all 1440×800.
 - Dashboard source: 448 + 24,072 + 8,880 = 33,400 B; no http(s) in HTML/CSS/JS.
@@ -114,6 +114,6 @@ Two runs on the same snapshot write the same bytes; these are the three artefact
 
 - `board.json` — 359,505 B, `sha256 0ff9e2ea83c038016bbbc2d6dfd5cda10cf9066abe4c20254313e1941a5090f3`
 - `data.js` — 398,273 B, `sha256 e22be28069a6078d518b5fcf9518a77cbc683222fb76049df29d258f1af71a92`
-- `dossier.json` — 334,165 B, `sha256 e1e47d294e6ecee40a9f901adba16dbe6854819cb86881a3f96178140df51284`
+- `dossier.json` — 334,163 B, `sha256 1f09f11e74b651d898370369ea63dff609578d9738842d2a8126bbd3d7d320b6`
 
 A missing snapshot or one that does not parse exits 2 before anything is written.

@@ -1,4 +1,5 @@
 // Token Radar model, version radar-1.0 (Node 22, no dependencies).
+// Model: parses the snapshot and scores, ranks and gates the pre-token board.
 //
 //   parseSnapshot(raw)        sealed snapshot text -> validated Snapshot, or SnapshotError
 //   buildRadar(snapshot)      Snapshot -> ranked board rows + the dashboard's RadarData

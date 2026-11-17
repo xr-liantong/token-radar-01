@@ -1,4 +1,5 @@
 // Token Radar — the runnable token-radar-01 entry (Node 22.18+, standard library only).
+// Entry: reads the sealed snapshot and writes the board, data and dossier.
 //
 // Pipeline: read the sealed snapshot (/input/snapshot.json, or --input <file|dir>) → score every
 // pre-token protocol with lib/model.ts → write board.json and data.js → copy dashboard/ and

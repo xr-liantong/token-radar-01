@@ -51,7 +51,7 @@ Two consecutive runs of `node main.ts --input ..\work\snapshot.json`, each into 
 |---|---:|---|
 | `board.json` | 359,505 | `0ff9e2ea83c038016bbbc2d6dfd5cda10cf9066abe4c20254313e1941a5090f3` |
 | `data.js` | 398,273 | `e22be28069a6078d518b5fcf9518a77cbc683222fb76049df29d258f1af71a92` |
-| `dossier.json` | 334,165 | `e1e47d294e6ecee40a9f901adba16dbe6854819cb86881a3f96178140df51284` |
+| `dossier.json` | 334,163 | `1f09f11e74b651d898370369ea63dff609578d9738842d2a8126bbd3d7d320b6` |
 
 ## Error boundary
 
