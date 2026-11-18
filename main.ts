@@ -7,6 +7,7 @@
 // page (dashboard/index.html, app.css, app.js) that reads data.js; it never touches the network.
 //
 // Exit codes: 0 wrote everything, 1 the model or screenshots broke the gate's shape, 2 no usable input.
+// A failed run prints one `token radar: <reason>` line on stderr and nothing on stdout.
 //
 // The repository holds no snapshot of its own: the grader mounts the sealed one at /input, and a
 // local run names it with --input. From this directory:
@@ -134,6 +135,7 @@ function checkShots(shots: readonly string[]): void {
 
 const argv = process.argv;
 const inputFile = snapshotPath(arg(argv, 'input', SEALED_INPUT_DIR));
+// Output directory: --output/--out wins, then MAKEFUN_OUTPUT_DIR, then /output (the grader's mount).
 const out = arg(argv, 'output', process.env.MAKEFUN_OUTPUT_DIR ?? DEFAULT_OUTPUT, 'out');
 
 const snapshot = loadSnapshot(inputFile);

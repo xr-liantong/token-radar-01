@@ -11,6 +11,7 @@
 //   maturity = maturity_floor + (min(age_days, maturity_days) / maturity_days) * maturity_range
 //   implied  = max(1, round(tvl_usd * base_multiple * growth * maturity))
 // Every derived number is rounded at the point it is written, so two runs write the same bytes.
+// Ranks come from a total order (implied, then TVL, then slug), so they never depend on input order.
 
 const DAY_MS = 86_400_000;
 
@@ -647,7 +648,10 @@ function rowIssue(
   return stepIssue(row);
 }
 
-/** The first invariant the board breaks, or null. The gate's shape, checked before anything is written. */
+/**
+ * The first invariant the board breaks, or null. The gate's shape, checked before anything is written;
+ * the watchlist must all be present and implied values must not all be equal.
+ */
 export function boardIssue(board: BoardRow[], snapshot: Snapshot): string | null {
   if (!Array.isArray(board) || board.length < MIN_BOARD_ROWS || board.length > MAX_BOARD_ROWS) {
     return `board has ${board.length} rows, expected ${MIN_BOARD_ROWS} to ${MAX_BOARD_ROWS}`;
